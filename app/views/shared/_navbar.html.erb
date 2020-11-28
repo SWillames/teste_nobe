@@ -1,0 +1,19 @@
+<nav class="sb-topnav navbar navbar-expand-lg navbar-light bg-light border-bottom fixed-top">  
+  <li class="navbar-brand">
+    <%= link_to root_path do %>
+      <%= image_tag "bank-logo", size: "30x30", class: "img-thumbnail"%>
+    <% end %>
+  </li>  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav d-none d-md-inline-block  ml-auto">
+      <% if customer_signed_in? == false %>
+        <li class="navbar-brand nav-item"><%= link_to 'Sign_in', new_customer_session_path, class: "nav-link" %></li>
+        <li class="navbar-brand nav-item"><%= link_to 'Sign_up', new_customer_registration_path, class: "nav-link" %></li>
+      <% else %>
+          <li class="navbar-brand nav-item"><%= link_to "Profile", edit_customer_registration_path, class: "nav-link"%></li>
+          
+          <li class="navbar-brand nav-item"><%= link_to 'Logout', destroy_customer_session_path, class:"nav-link", method: :delete %></li> 
+      <% end %>            
+    </ul>
+  </div>
+</nav>

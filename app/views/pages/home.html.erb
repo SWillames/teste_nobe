@@ -1,0 +1,20 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-10 col-lg-8 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <% if customer_signed_in? == false%>
+              <h5 class="card-title text-center font-weight-light text-dark">Welcome Visitor</h5>
+            <% else %>
+              <h5 class="card-title text-center font-weight-light text-dark">Welcome <%= current_customer.first_name %></h5>
+              
+            <%end%> 
+            <hr>
+          </div>
+          <%= render 'shared/operations' %>
+        </div>
+      </div>
+    </div>
+  </div>    
+</body>

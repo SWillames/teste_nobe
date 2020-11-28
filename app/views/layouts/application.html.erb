@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
   <head>
     <title>NobeBanking</title>
@@ -6,10 +6,29 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
   </head>
 
   <body>
-    <%= yield %>
+    <div class="d-flex" id="wrapper">
+      <div id="page-content-wrapper">
+        <header>
+          <%= render "shared/navbar"%>
+        </header>
+      </div>
+    </div>
+   <p></p>  
+    <main>
+      <div class="container-fluid">
+        <p class="notice ">
+        <%= yield %>
+      </div>
+    </main>
+    <div>
+      <%= render "shared/footer" %>
+    </div>
+
+
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>
