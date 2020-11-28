@@ -1,0 +1,75 @@
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-10 col-lg-8 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Register</h5>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "form-signin") do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
+                    <div class="form-row">
+                        <div class="form-label-group col-md-6">
+                            <%= f.text_field :first_name, autofocus: true, autocomplete: "name", 
+                                             class: "form-control", placeholder: "First Name" %>
+                            <%= f.label :first_name %> 
+                        </div>
+
+                        <div class="form-label-group col-md-6">
+                            <%= f.text_field :last_name, autofocus: true, autocomplete: "name", 
+                                             class: "form-control", placeholder: "Last Name" %>
+                            <%= f.label :last_name %> 
+                        </div>
+
+                        <div class="form-label-group col-md-6">
+                            <%= f.text_field :cpf, autofocus: true, autocomplete: "cpf", 
+                                             class: "form-control", placeholder: "CPF" %>
+                            <%= f.label :cpf %>
+                        </div>
+
+                        <div class="form-label-group col-md-6">
+                            <%= f.text_field :rg, autofocus: true, autocomplete: "rg", 
+                                             class: "form-control", placeholder: "RG" %>
+                            <%= f.label :rg %>
+                        </div>
+
+                        <div class="form-label-group col-md-6">
+                            <%= f.text_field :address, autofocus: true, autocomplete: "address", 
+                                             class: "form-control", placeholder: "Address" %>
+                            <%= f.label :address %><br />
+                        </div>
+                        <div class="form-label-group col-md-6">
+                            <%= f.email_field :email, autofocus: true, autocomplete: "email", 
+                                             class: "form-control", placeholder: 'Email'%>
+                            <%= f.label :email %>
+                        </div>
+
+                        <div class="form-label-group  col-md-6">
+                          
+                            <%= f.password_field :password, autocomplete: "new-password", 
+                                                 class: "form-control", placeholder: 'Email' %>
+                            
+                            <small id="emailHelp" class="form-text text-muted">(<%= @minimum_password_length %> characters minimum)</small>
+                            <% if @minimum_password_length %>
+                            <% end %>
+                            <%= f.label :password %>
+                            
+                        </div>
+
+                        <div class="form-label-group col-md-6">
+                            <%= f.password_field :password_confirmation, autocomplete: "new-password", 
+                                                  class: "form-control", placeholder: 'Email' %>
+                            <%= f.label :password_confirmation %><br />
+                        </div>
+                    </div>
+
+                  <div class="actions">
+                    <%= f.submit "Sign up", class: "btn btn-lg btn-primary btn-block text-uppercase" %>
+                  </div>
+              <% end %>
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>     
+</body>
