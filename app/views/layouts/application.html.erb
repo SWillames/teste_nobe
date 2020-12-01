@@ -17,11 +17,21 @@
         </header>
       </div>
     </div>
-   <p></p>  
     <main>
       <div class="container-fluid">
-        <p class="notice ">
-        <%= yield %>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-9 col-md-10 col-lg-8 mx-auto">
+              <div class="card card-signin my-5">
+                <div class="card-body">
+                  <div class="notice"><%= notice %></div>
+                  <div class="alert"><%= alert %></div>
+                  <%= yield %>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <div>
