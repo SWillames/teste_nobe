@@ -6,7 +6,7 @@ class Account < ApplicationRecord
   validates_format_of :account_number, with: /\A.[0-9]+\z/
   validates_length_of :account_number, in: 4..8 
 
-  before_save :load_standart
+  before_validation :load_standart
 
   def load_standart
     if self.new_record?
