@@ -1,0 +1,16 @@
+<%= render 'shared/errors',obj: @operation %>
+<%= form_for(@operation, url: withdraw_path, class: "form-signin") do |f|%>
+  <div>
+    <%= f.hidden_field :account_id, value: @account.id%>
+    <%= f.hidden_field :recipient, value: @account.account_number%>
+  </div>
+  
+  <div>
+    <%= f.label :amount%>
+    <%= f.number_field :amount%>
+  </div>
+
+  <div>
+    <%= f.submit "Withdraw"%>
+  </div>
+<% end %>

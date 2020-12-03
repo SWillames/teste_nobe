@@ -1,7 +1,6 @@
 class Operation < ApplicationRecord
   belongs_to :account
   KIND = %w[whithdraw deposit transfer]
-  belongs_to :account
   validates_presence_of :account, :amount
   validates :kind, presence: true, inclusion: { in: KIND }
   validate :check_withdraw

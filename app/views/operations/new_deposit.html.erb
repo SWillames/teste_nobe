@@ -1,0 +1,20 @@
+<%= render 'shared/errors',obj: @operation %>
+
+
+<%= form_for(@operation, url: deposit_path, class: "form-signin") do |f|%>
+  <div>
+    <%= f.hidden_field :account_id, value: @account.id%>
+    <%= f.hidden_field :recipient, value: @account.account_number%>
+  </div>
+  
+  <div>
+    <%= f.label :amount%>
+    <%= f.text_field :amount%>
+  </div>
+
+  <div>
+    <%= f.submit "Deposit"%>
+  </div>
+
+
+<% end %>
