@@ -1,0 +1,24 @@
+<h5 class="card-title text-center">Nobe Banking System</h5>
+<div class="form-row">
+  <div class="form-label-group col-md-6">
+    <strong> Customer:
+    <%= @operation.account.customer.full_name %> </strong>
+  </div>
+
+  <div class="form-label-group col-md-6">
+    <strong> Account Number: 
+    <%= @operation.account.account_number %></storng>
+  </div>
+</div>
+
+<div class="form-row">
+  <div class="form-label-group col-md-6">
+    <strong> Operation:
+    <%= @operation.kind %> </strong>
+  </div>
+
+  <div class="form-label-group col-md-6">
+    <b> Amount:
+    <%= @operation.amount %> </b>
+  </div>
+</div> 
