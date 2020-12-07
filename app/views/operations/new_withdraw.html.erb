@@ -1,16 +1,20 @@
-<%= render 'shared/errors',obj: @operation %>
-<%= form_for(@operation, url: withdraw_path, class: "form-signin") do |f|%>
+  <h5 class="card-title text-center">Withdraw</h5>
+<%= form_for(@operation, url: withdraw_path, class: "form-horizontal") do |f|%>
+  <%= render 'shared/errors',obj: @operation %>
   <div>
     <%= f.hidden_field :account_id, value: @account.id%>
     <%= f.hidden_field :recipient, value: @account.account_number%>
   </div>
   
-  <div>
+  <div class="form-label-group col-md-8">
+    <%= f.number_field :amount, autofocus: true, autocomplete: "amount", 
+                            class: "form-control", placeholder: "Amount"%>
     <%= f.label :amount%>
-    <%= f.number_field :amount%>
   </div>
 
-  <div>
-    <%= f.submit "Withdraw"%>
+  <div class="actions">
+    <%= f.submit "Withdraw", class: "btn btn-success btn-lg btn-primary"%>
   </div>
+  
 <% end %>
+    <%= link_to "Back",root_path %>
