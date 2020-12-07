@@ -10,4 +10,10 @@ class Customer < ApplicationRecord
   validates_format_of :email, with: EMAIL_FORMAT
   validates_format_of :cpf, with: /\A.[0-9]+\z/
   validates_length_of :cpf, is: 11
+
+
+  def full_name
+    "#{first_name}#{last_name}" 
+  end
+  
 end
