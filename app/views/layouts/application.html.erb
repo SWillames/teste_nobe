@@ -10,13 +10,10 @@
   </head>
 
   <body>
-    <div class="d-flex" id="wrapper">
-      <div id="page-content-wrapper">
-        <header>
+     <header>
           <%= render "shared/navbar"%>
-        </header>
-      </div>
-    </div>
+     </header>
+
     <main>
       <div class="container-fluid">
         <div class="container">
@@ -24,8 +21,8 @@
             <div class="col-sm-9 col-md-10 col-lg-8 mx-auto">
               <div class="card card-signin my-5">
                 <div class="card-body">
-                  <div class="notice"><%= notice %></div>
-                  <div class="alert"><%= alert %></div>
+                  <%= notice %>
+                  <%= alert %>
                   <%= yield %>
                 </div>
               </div>
