@@ -1,5 +1,10 @@
 class OperationsController < ApplicationController
   before_action :authenticate_customer!
+  def index
+    @operations = Operation.where(account_id: current_customer)
+  end
+  
+ 
   def show
     @operation = Operation.find(params[:id])
   end
@@ -44,12 +49,6 @@ class OperationsController < ApplicationController
       end
     end
   end
-  
-  def search
-    @account = Account.where('account_number = ?',
-      params[:q])
-  end
-  
 
   private
   def operations_params
