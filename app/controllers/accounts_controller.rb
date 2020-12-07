@@ -1,6 +1,6 @@
 class AccountsController < ApplicationController
   def show
-    @operation = Operation.find(params[:id])
+    @account = Account.find(params[:id])
   end
   
 end

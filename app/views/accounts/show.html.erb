@@ -1,0 +1,18 @@
+<h5 class="card-title text-center">Your Account</h5>
+    
+    <div class="form-label-group col-md-6">
+      <strong>Account number:</strong>
+      <%= @account.account_number %>
+    </div>
+
+    <div class="form-label-group col-md-6">
+      <strong>Balance:</strong>
+      <%= @account.balance %>
+    </div>
+
+    <div class="form-label-group col-md-6">
+      <strong>Customer:</strong>
+      <%= @account.customer.full_name %>
+    </div>
+    <hr/>
+    <%= render 'shared/operations' %>
