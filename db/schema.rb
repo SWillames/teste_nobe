@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_03_131036) do
+ActiveRecord::Schema.define(version: 2020_12_07_124111) do
 
   create_table "accounts", force: :cascade do |t|
     t.string "account_number"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(version: 2020_12_03_131036) do
     t.float "amount"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "date"
+    t.float "interest_rate", default: 0.0, null: false
     t.index ["account_id"], name: "index_operations_on_account_id"
   end
 
