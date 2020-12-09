@@ -1,4 +1,4 @@
-class ValidationTransferService
+class ValidationOperationService
   def initialize(operations_params)
     @account = Account.find(operations_params[:account_id])
     @kind = operations_params[:kind]

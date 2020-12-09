@@ -4,6 +4,8 @@
       <div>
         <%= f.hidden_field :account_id, value: @account.id%>
         <%= f.hidden_field :recipient, value: @account.account_number%>
+        <%= f.hidden_field :kind, value: @kind%>
+        <%= f.hidden_field :interest_rate, value: @interest_rate%>
       </div>
     
       <div class="form-label-group col-md-8">

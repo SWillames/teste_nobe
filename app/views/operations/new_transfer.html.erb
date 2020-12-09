@@ -3,18 +3,19 @@
     <%= @errors %>
       <div>
         <%= f.hidden_field :account_id, value: @account.id%>
-        <%= f.hidden_field :kind, value: "transfer"%>
+        <%= f.hidden_field :kind, value: @kind%>
+        <%= f.hidden_field :interest_rate, value: @interest_rate%>
       </div>
 
   <div class="form-label-group col-md-8">
     <%= f.number_field :recipient, autofocus: true, autocomplete: "recipient", 
-                     class: "form-control", placeholder: "Recipient" %><br />
+                     class: "form-control", placeholder: "" %><br />
     <%= f.label :recipient, "Account No" %>
   </div>
 
   <div class="form-label-group col-md-8">
     <%= f.text_field :amount, autofocus: true, autocomplete: "amount", 
-                     class: "form-control", placeholder: "Amount" %><br />
+                     class: "form-control", placeholder: "" %><br />
     <%= f.label :amount, "Amount to transfer", class: "control-label" %>
   </div>
   <div class="actions">
