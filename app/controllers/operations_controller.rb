@@ -1,10 +1,16 @@
 class OperationsController < ApplicationController
   before_action :authenticate_customer!
-  layout 'search', only: [:index] 
+  layout 'search', only: [:index, :search] 
   def index
-    account = current_customer.account
-    @operations = Operation.where(account_id: account.id)
+    @search = Operation.search(params[:q])
+    @operations = @search.result.where(account_id: current_customer.account)
   end
+
+  def search
+    index
+    render :index
+  end
+  
   
  
   def show

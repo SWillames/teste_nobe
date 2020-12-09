@@ -14,6 +14,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'devise'
 gem 'tty-spinner'
 gem 'faker'
+gem 'ransack'
 
 group :development, :test do
   gem 'rspec-rails'
