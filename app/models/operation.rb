@@ -12,9 +12,5 @@ class Operation < ApplicationRecord
     errors.add(:amount, 'Not enough balance in account!') if kind == "withdraw" && amount > account.balance
   end 
 
-  def dateformat
-    date = self.created_at
-    date.strftime("%dd/%mm/%YYYY")
-  end
   
 end
