@@ -1,24 +1,20 @@
 <h5 class="card-title text-center">Nobe Banking System</h5>
-<div class="form-row">
-  <div class="form-label-group col-md-6">
-    <strong> Customer:
-    <%= @operation.account.customer.full_name %> </strong>
-  </div>
-
-  <div class="form-label-group col-md-6">
-    <strong> Account Number: 
-    <%= @operation.account.account_number %></storng>
-  </div>
-</div>
 
 <div class="form-row">
-  <div class="form-label-group col-md-6">
-    <strong> Operation:
-    <%= @operation.kind %> </strong>
-  </div>
+  <div class="col-md-8"> Customer:</div>
+  <div class="col-md-4"><b><%= @operation.account.customer.full_name %></b></div>
+  
+  <div class="col-md-8"> Account Number: </div>
+  <div class="col-md-4"><b> <%= @operation.account.account_number %></b></div>
 
-  <div class="form-label-group col-md-6">
-    <b> Amount:
-    <%= @operation.amount %> </b>
-  </div>
+  <div class="col-md-8"> Operation: </div>
+  <div class="col-md-4"> <b> <%= @operation.kind %> </b> </div>
+
+  <div class="col-md-8"> Amount: </div>
+  <div class="col-md-4"> <b> <%= @operation.amount %> </b> </div>
+
+  <div class="col-md-8"> Rate: </div>
+  <div class="col-md-4"> <b> <%= @operation.interest_rate %> </b> </div>
 </div> 
+<br />
+<%= link_to "Back",root_path %>
