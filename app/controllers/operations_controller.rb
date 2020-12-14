@@ -1,9 +1,11 @@
 class OperationsController < ApplicationController
+  include Pagy::Backend
   before_action :authenticate_customer!
   layout 'search', only: [:index, :search] 
+  
   def index
     @search = Operation.search(params[:q])
-    @operations = @search.result.where(account_id: current_customer.account)
+    @pagy, @operations = pagy(@search.result.where(account_id: current_customer.account))
   end
 
   def search

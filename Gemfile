@@ -15,6 +15,7 @@ gem 'devise'
 gem 'tty-spinner'
 gem 'faker'
 gem 'ransack'
+gem 'pagy'
 
 group :development, :test do
   gem 'rspec-rails'
