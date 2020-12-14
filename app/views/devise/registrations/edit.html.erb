@@ -52,7 +52,8 @@
               <em><%= @minimum_password_length %> characters minimum</em>
             <% end %>
           </div>
-
+        </div>
+        <div class="form-row">
           <div class="form-label-group col-md-6">
             <%= f.password_field :password_confirmation, autocomplete: "new-password", 
                                 class: "form-control", placeholder: "Password" %>
