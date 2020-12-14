@@ -4,43 +4,43 @@
     <div class="form-row">
       <div class="form-label-group col-md-6">
           <%= f.text_field :first_name, autofocus: true, autocomplete: "name", 
-                            class: "form-control", placeholder: "" %>
+                            class: "form-control", placeholder: "first_name" %>
           <%= f.label :first_name %> 
       </div>
 
       <div class="form-label-group col-md-6">
           <%= f.text_field :last_name, autofocus: true, autocomplete: "name", 
-                            class: "form-control", placeholder: "" %>
+                            class: "form-control", placeholder: "last_name" %>
           <%= f.label :last_name %> 
       </div>
 
       <div class="form-label-group col-md-6">
           <%= f.text_field :cpf, autofocus: true, autocomplete: "cpf", 
-                            class: "form-control", placeholder: "" %>
+                            class: "form-control", placeholder: "CPF" %>
           <%= f.label :cpf %>
       </div>
 
       <div class="form-label-group col-md-6">
           <%= f.text_field :rg, autofocus: true, autocomplete: "rg", 
-                            class: "form-control", placeholder: "" %>
+                            class: "form-control", placeholder: "RG" %>
           <%= f.label :rg %>
       </div>
 
       <div class="form-label-group col-md-6">
           <%= f.text_field :address, autofocus: true, autocomplete: "address", 
-                            class: "form-control", placeholder: "" %>
+                            class: "form-control", placeholder: "Address" %>
           <%= f.label :address %><br />
       </div>
       <div class="form-label-group col-md-6">
           <%= f.email_field :email, autofocus: true, autocomplete: "email", 
-                            class: "form-control", placeholder: ''%>
+                            class: "form-control", placeholder: 'Email'%>
           <%= f.label :email %>
       </div>
 
       <div class="form-label-group  col-md-6">
         
           <%= f.password_field :password, autocomplete: "new-password", 
-                                class: "form-control", placeholder: 'Email' %>
+                                class: "form-control", placeholder: 'Password' %>
           
           <small id="emailHelp" class="form-text text-muted">(<%= @minimum_password_length %> characters minimum)</small>
           <% if @minimum_password_length %>
@@ -51,7 +51,7 @@
 
       <div class="form-label-group col-md-6">
           <%= f.password_field :password_confirmation, autocomplete: "new-password", 
-                                class: "form-control", placeholder: '' %>
+                                class: "form-control", placeholder: 'pass' %>
           <%= f.label :password_confirmation %><br />
       </div>
     </div>
