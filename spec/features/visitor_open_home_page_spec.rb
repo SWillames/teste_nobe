@@ -9,7 +9,5 @@ feature 'Visitor open home page' do
     expect(page).to have_link('Sign_in')
     expect(page).to have_link('Sign_up')
     expect(page).to have_content('Welcome Visitor')
-    expect(page).to have_link('Deposit')
-    expect(page).to have_link('Withdraw')
   end
 end
