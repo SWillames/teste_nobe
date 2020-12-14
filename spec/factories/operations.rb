@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :operation do
-    account { nil }
+    account { create(:account) }
     kind { "MyString" }
     recipient { "MyString" }
   end
